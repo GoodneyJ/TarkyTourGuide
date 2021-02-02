@@ -169,6 +169,45 @@ body {
   padding-bottom: 5rem;
 }
 
+/* HOME PAGE RULESETS */
+#news-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+#twitter-container {
+  width: 50%;
+}
+
+#reddit-container {
+  background-color:#070707;
+  width: 50%;
+  height: 350px;
+  overflow: auto;
+  border-radius: 5px;
+  padding: 1.5rem;
+}
+
+#reddit-container h2 {
+  margin-top: 0;
+}
+
+.reddit-thread {
+  text-decoration: none;
+  color: #DCC497;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+
+.reddit-thread p {
+  background-color: #161616;
+  padding: .5rem;
+  border-radius: 5px;
+}
+
 /* KEY & AMMO RULESETS */
 .card-title {
   color: #DCC497;
