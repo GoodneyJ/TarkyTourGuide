@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Timeline } from 'react-twitter-widgets'
-import Threads from './threads.js'
 
 export default class home extends Component {
     constructor(props) {
