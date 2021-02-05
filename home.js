@@ -45,8 +45,11 @@ export default class home extends Component {
         } else {
             return (
                 <div id='home-container'>
-                    <h2> EFT News </h2>
+
                     <div id="news-container">
+                        <div id="twitter-heading-container">
+                            <h2> EFT News </h2>
+                        </div>
                         <div id="twitter-container">
                             <Timeline
                             dataSource={{
@@ -57,20 +60,25 @@ export default class home extends Component {
                             options={
                                 {
                                 theme: 'dark',
-                                height: '800',
-
-                                width: '1000',
+                                height: '400',
+                                width: '650',
+                                chrome: 'transparent',
                                 align: 'center',
                             }}
                             />
                         </div>
+
+                        <div id="reddit-heading-container">
+                                <h2>EFT Reddit</h2>
+                        </div>
                         <div id="reddit-container">
-                            <h2>EFT Reddit</h2>
+
                             {this.state.threads.map(thread => {
                                 
                                 return (
-                                    <div>
-                                        <a className="reddit-thread" href={`https://www.reddit.com${thread.data.permalink}` }><p><span className="score-span"><FaArrowAltCircleUp id="upvote" /> {thread.data.score}</span> {thread.data.title} by {thread.data.author}</p></a>
+                                    <div className="reddit-thread-container">
+                                        <span className="score-span"><FaArrowAltCircleUp className="upvote" /> {thread.data.score}</span> 
+                                        <a className="reddit-thread" href={`https://www.reddit.com${thread.data.permalink}` }><p>{thread.data.title} by {thread.data.author}</p></a>
                                     </div>
                                 )
                             })}

@@ -106,6 +106,8 @@ body {
 .selected {
   color: #DCC497;
   transition: color 250ms linear;
+  font-weight: 700;
+  transition: font-weight 150ms linear;
 }
 
 .selected .icon {
@@ -170,43 +172,83 @@ body {
 }
 
 /* HOME PAGE RULESETS */
-#news-container{
 
-  margin-top: 1rem;
+
+#twitter-heading-container {
+  margin-top: 3rem;
+  background-color: #070707;
+  width: 70%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#twitter-heading-container h2 {
+  margin: 0 auto;
+
 }
 
 #twitter-container {
   display: flex;
   justify-content: center;
   text-align: center;
-  width: 75%;
+  width: 70%;
   margin: 0 auto;
+  background-color: #131313;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 
-#reddit-container {
-  margin-top: 3rem;
+#reddit-heading-container {
   background-color:#070707;
-  width: 50%;
-  margin: 1rem auto;
+  width: 70%;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .5rem 1.5rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#reddit-heading-container h2 {
+  margin-bottom: 1rem;
+}
+
+#reddit-container {
+
+  background-color:#131313;
+  width: 70%;
+  margin: 0rem auto;
   height: 350px;
   overflow: auto;
   border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   padding: 1.5rem;
 }
 
-#reddit-container h2 {
 
-}
+
 
 .score-span {
-  background-color: #070707;
-  padding: .6rem .6rem;
+  display: flex;
+  background-color: #131313;
+  padding: .6rem .8rem;
   border-radius: 10px;
   margin: 0 .5rem;
+  margin-left: 1rem;
+  font-size: 1rem;
 }
 
-#upvote {
+.score-span .upvote {
+  margin-right: .5rem;
+}
+
+.upvote {
   vertical-align: middle;
   margin: auto;
 }
@@ -215,15 +257,18 @@ body {
   text-decoration: none;
   color: #DCC497;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: .9rem;
   margin: .25rem auto;
 
 }
 
-.reddit-thread p {
-  background-color: #161616;
-  padding: 1rem;
-  border-radius: 5px;
+
+.reddit-thread-container {
+  display: flex;
+  align-items: center;
+  background-color: #070707;
+  margin: 1rem;
+  border-radius: 15px;
   
 }
 
@@ -381,8 +426,10 @@ body {
 
 
 
-#button-container {
-  width: 75%;
+.button-container {
+  background-color: #131313;
+  border-radius: 5px;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   animation: fadeIn;
@@ -509,5 +556,11 @@ body {
   .card {
     width: 12rem;
     height: 12rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+  .row {
+    width: 100%;
   }
 }
