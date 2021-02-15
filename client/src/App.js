@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './navbar.js'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import Home from './home.js'
 import Ammo from './ammo.js';
 import Keys from './keys.js';
@@ -26,14 +26,19 @@ function App() {
           {/* MAIN CONTENT */}
           <Navbar />
         </div>
+
         <Switch>
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+          <Route path="/home" component={Home} />
           <Route path="/ammo" component={Ammo}/>
           <Route path="/keys" component={Keys}/>
           <Route path="/maps" component={Maps}/>
         </Switch>
       </Router>
 
-      <Home />
+
 
 
       

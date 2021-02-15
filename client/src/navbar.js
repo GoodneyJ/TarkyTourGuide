@@ -10,7 +10,7 @@ export default class navbar extends Component {
             <div id="navbar-container">
 
                     <ul class='navbar'>
-                        <NavLink className="nav-link-item" activeClassName="selected" to='/app'>
+                        <NavLink className="nav-link-item" activeClassName="selected" to='/home'>
                             <li class='nav-item'>
                                 <FaHome className="icon"/>
                                 <p class='nav-sub-heading'>HOME</p>

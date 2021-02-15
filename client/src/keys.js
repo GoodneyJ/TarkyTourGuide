@@ -54,22 +54,25 @@ export default class keys extends Component {
 
         if(this.state.input === '') {
             return (
-                <div>
-                        <input className='input' name="ammo" type='text' placeholder="What key are you looking for?" value={this.state.input} onChange={this.handleChange} />
+                <div id="bruh">
+                    <input className='input' name="ammo" type='text' placeholder="What key are you looking for?" value={this.state.input} onChange={this.handleChange} />
+                    <div className="button-container">
+                        
 
-                    <div className = 'row' id="center-stuff">
-                        <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Customs' listType="keys" backgroundThumbnail={CustomsThumbnail}/>
-                        <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Interchange' listType="keys" backgroundThumbnail={InterchangeThumbnail}/>
-                        <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Factory' listType="keys" backgroundThumbnail={FactoryThumbnail}/>
-                    </div>
-                    <div className="row">
-                        <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Shoreline' listType="keys" backgroundThumbnail={ShorelineThumbnail}/>
-                        <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Reserve' listType="keys" backgroundThumbnail={ReserveThumbnail}/>
-                        <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Labs' listType="keys" backgroundThumbnail={LabsThumbnail}/>
+                        <div className = 'row' id="center-stuff">
+                            <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Customs' listType="keys" backgroundThumbnail={CustomsThumbnail}/>
+                            <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Interchange' listType="keys" backgroundThumbnail={InterchangeThumbnail}/>
+                            <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Factory' listType="keys" backgroundThumbnail={FactoryThumbnail}/>
+                        </div>
+                        <div className="row">
+                            <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Shoreline' listType="keys" backgroundThumbnail={ShorelineThumbnail}/>
+                            <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Reserve' listType="keys" backgroundThumbnail={ReserveThumbnail}/>
+                            <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Labs' listType="keys" backgroundThumbnail={LabsThumbnail}/>
 
-                    </div>
-                    <div className="row">
-                    <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Woods' listType="keys" backgroundThumbnail={WoodsThumbnail}/>
+                        </div>
+                        <div className="row">
+                        <ButtonComponent stateList={this.state.keyList} buttonTitleProp='Woods' listType="keys" backgroundThumbnail={WoodsThumbnail}/>
+                        </div>
                     </div>
                 </div>
             )

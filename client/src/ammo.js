@@ -69,7 +69,7 @@ export default class ammo extends Component {
             return (
                 <div id='bruh'>
                     <input className='input' name="ammo" type='text' placeholder="What type of ammo do you need?" value={this.state.input} onChange={this.handleChange} />
-                    <div id="button-container">
+                    <div className="button-container">
                         <div className="row">
                             <ButtonComponent stateList={this.state.ammoList} buttonTitleProp='.45' listType="ammo" backgroundThumbnail={UMP}/>
                             <ButtonComponent stateList={this.state.ammoList} buttonTitleProp='4.6x30' listType="ammo" backgroundThumbnail={MP7}/>
